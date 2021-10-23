@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.kordamp.bootstrapfx.BootstrapFX;
 
@@ -13,6 +14,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class SeekerSignInController extends SignInController {
+
     @Override
     public boolean sendInfoToDatabase() {
         boolean validFields = super.textFieldCheck();
@@ -29,10 +31,10 @@ public class SeekerSignInController extends SignInController {
         Stage stage;
         Parent root;
         stage = (Stage) super.SignIn.getScene().getWindow();
-        root = FXMLLoader.load(Objects.requireNonNull(
-                        getClass().getResource("seeker-home-view.fxml")
-                )
-        );
+        FXMLLoader fxmlLoader = new FXMLLoader(HealthApp.class.getResource("seeker-home-view.fxml"));
+        root = fxmlLoader.load();
+        SeekerHomeController controller = fxmlLoader.getController();
+        controller.setServices(super.getServices());
 
         Scene scene = new Scene(root, 375, 600);
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());

@@ -6,13 +6,17 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" spacing="20.0" styleClass="bg-default" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.healthhgt8.mentalhealthapp.SeekerHomeController">
+<VBox fx:id="volunteerHomePane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" spacing="20.0" styleClass="bg-default" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.healthhgt8.mentalhealthapp.VolunteerHomeController">
    <children>
       <BorderPane prefHeight="600.0" prefWidth="300.0">
          <top>
@@ -32,9 +36,9 @@
                 <RowConstraints maxHeight="406.5079040527344" minHeight="10.0" prefHeight="406.5079040527344" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <VBox alignment="CENTER" prefHeight="493.0" prefWidth="335.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" spacing="10">
+                  <VBox alignment="CENTER" prefHeight="461.0" prefWidth="336.0" spacing="10" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
                      <children>
-                        <Label text="Person Needs Help" />
+                        <Label text="Someone Needs Your Help" />
                         <Label text="Name">
                            <VBox.margin>
                               <Insets top="10.0" />
@@ -44,11 +48,32 @@
                         <Label text="Year" />
                         <Label text="School" />
                         <Label text="Description" />
-                        <Button mnemonicParsing="false" text="Connect on Zoom">
+                        <Button contentDisplay="RIGHT" mnemonicParsing="false" onAction="#launchGMeet" text="Connect on Google Meet">
                            <VBox.margin>
                               <Insets top="15.0" />
                            </VBox.margin>
+                           <graphic>
+                              <ImageView disable="true" fitHeight="20.0" fitWidth="20.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Google_Meet.max-1100x1100.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                           </padding>
                         </Button>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <Label text="Meeting&#13;Link" />
+                              <TextField alignment="BASELINE_LEFT">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </TextField>
+                              <Button mnemonicParsing="false" text="Enter" onAction="#handleMeetLink"/>
+                           </children>
+                        </HBox>
                      </children>
                   </VBox>
                </children>

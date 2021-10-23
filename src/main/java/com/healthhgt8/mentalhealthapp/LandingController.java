@@ -1,5 +1,6 @@
 package com.healthhgt8.mentalhealthapp;
 
+import javafx.application.HostServices;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,6 +18,13 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class LandingController implements Initializable {
+
+    private HostServices services;
+
+    public void setServices(HostServices services) {
+        this.services = services;
+    }
+
     @FXML
     private Button seekerSignInBtn;
     @FXML
@@ -29,10 +37,11 @@ public class LandingController implements Initializable {
         Stage stage;
         Parent root;
         stage = (Stage) seekerSignInBtn.getScene().getWindow();
-        root = FXMLLoader.load(Objects.requireNonNull(
-                getClass().getResource("seeker-signin-view.fxml")
-                    )
-                );
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("seeker-signin-view.fxml"));
+        root = fxmlLoader.load();
+        SeekerSignInController controller = fxmlLoader.getController();
+        controller.setServices(this.services);
 
         Scene scene = new Scene(root, 375, 700);
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
@@ -44,10 +53,11 @@ public class LandingController implements Initializable {
         Stage stage;
         Parent root;
         stage = (Stage) volunteerSignInBtn.getScene().getWindow();
-        root = FXMLLoader.load(Objects.requireNonNull(
-                        getClass().getResource("volunteer-signin-view.fxml")
-                )
-        );
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("volunteer-signin-view.fxml"));
+        root = fxmlLoader.load();
+        VolunteerSignInController controller = fxmlLoader.getController();
+        controller.setServices(this.services);
 
         Scene scene = new Scene(root, 375, 600);
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());

@@ -8,9 +8,8 @@
 <?import javafx.scene.control.Button?>
 
 <?import javafx.scene.layout.AnchorPane?>
-<?import
 
-<VBox alignment="CENTER" spacing="20.0"
+<VBox alignment="CENTER" spacing="15.0"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.healthhgt8.mentalhealthapp.VolunteerSignInController">
     <padding>
@@ -38,6 +37,10 @@
     <Label text="Enter Year:"/>
     <TextField fx:id="yearInput"/>
     <Label fx:id="validYear"/>
+
+    <Label text="Enter Email: (Used to connect to Google Meet)"/>
+    <TextField fx:id="emailInput"/>
+    <Label fx:id="validEmail"/>
 
     <Button fx:id="SignIn" text="Sign Up" onAction="#startVolunteerScreen"
             styleClass="btn, btn-primary"/>

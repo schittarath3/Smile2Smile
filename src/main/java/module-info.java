@@ -9,6 +9,9 @@ module com.healthhgt8.mentalhealthapp {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires unirest.java;
+    requires org.mongodb.driver.sync.client;
+    requires org.mongodb.driver.core;
 
     opens com.healthhgt8.mentalhealthapp to javafx.fxml;
     exports com.healthhgt8.mentalhealthapp;

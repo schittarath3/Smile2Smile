@@ -34,12 +34,12 @@
                 <RowConstraints maxHeight="406.5079040527344" minHeight="10.0" prefHeight="406.5079040527344" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <VBox alignment="CENTER" prefHeight="493.0" prefWidth="335.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                  <VBox alignment="CENTER" prefHeight="493.0" prefWidth="335.0" spacing="2" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
                      <children>
                         <AnchorPane prefHeight="10.0" prefWidth="200.0">
                            <children>
                               <Label alignment="BASELINE_LEFT" text="Available Helpers:" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="4.0" />
-                              <Button mnemonicParsing="false" text="Refresh" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="4.0">
+                              <Button maxHeight="20.0" minHeight="20.0" mnemonicParsing="false" prefHeight="20.0" text="Refresh" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
                                  <font>
                                     <Font size="9.0" />
                                  </font>

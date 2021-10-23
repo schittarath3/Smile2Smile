@@ -1,5 +1,6 @@
 package com.healthhgt8.mentalhealthapp;
 
+import javafx.application.HostServices;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -38,6 +39,11 @@ public abstract class SignInController implements Initializable {
     private Label validYear;
 
     @FXML
+    private TextField emailInput;
+    @FXML
+    private Label validEmail;
+
+    @FXML
     private CheckBox anonCheck;
 
     @FXML
@@ -45,11 +51,22 @@ public abstract class SignInController implements Initializable {
     @FXML
     private Button signInBack;
 
+    private HostServices services;
+
+    public void setServices(HostServices services) {
+        this.services = services;
+    }
+
+    public HostServices getServices() {
+        return services;
+    }
+
     @FXML
     void handleSignInBack() throws IOException {
         Stage stage = (Stage) validSchool.getScene().getWindow();
 
         FXMLLoader fxmlLoader = new FXMLLoader(HealthApp.class.getResource("landing-view.fxml"));
+
         Scene scene = new Scene(fxmlLoader.load(), 375, 700);
         stage.setTitle("Hello!");
         stage.setScene(scene);
@@ -88,6 +105,14 @@ public abstract class SignInController implements Initializable {
             validFields = false;
         } else {
             validYear.setText("");
+        }
+
+        if (emailInput.getText().split(" ").length == 0
+                || emailInput.getText().length() == 0) {
+            validEmail.setText("Enter a valid year");
+            validFields = false;
+        } else {
+            validEmail.setText("");
         }
         return validFields;
     }

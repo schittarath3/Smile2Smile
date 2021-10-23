@@ -1,17 +1,19 @@
 package com.healthhgt8.mentalhealthapp;
 
-import javafx.fxml.FXMLLoader;
+import javafx.application.HostServices;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import org.kordamp.bootstrapfx.BootstrapFX;
+
 
 import java.net.URL;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class SeekerHomeController implements Initializable {
+
+    private HostServices services;
+
+    public void setServices(HostServices services) {
+        this.services = services;
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

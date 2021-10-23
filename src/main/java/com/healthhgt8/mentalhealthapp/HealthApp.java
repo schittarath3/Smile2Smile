@@ -12,7 +12,12 @@ public class HealthApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HealthApp.class.getResource("landing-view.fxml"));
+
         Scene scene = new Scene(fxmlLoader.load(), 375, 600);
+
+        LandingController controller = (LandingController) fxmlLoader.getController();
+        controller.setServices(this.getHostServices());
+
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
         stage.setTitle("Hello!");
         stage.setScene(scene);

@@ -29,10 +29,11 @@ public class VolunteerSignInController extends SignInController{
         Stage stage;
         Parent root;
         stage = (Stage) super.SignIn.getScene().getWindow();
-        root = FXMLLoader.load(Objects.requireNonNull(
-                        getClass().getResource("volunteer-home-view.fxml")
-                )
-        );
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HealthApp.class.getResource("volunteer-home-view.fxml"));
+        root = fxmlLoader.load();
+        VolunteerHomeController controller = fxmlLoader.getController();
+        controller.setServices(super.getServices());
 
         Scene scene = new Scene(root, 375, 600);
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
