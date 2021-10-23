@@ -30,8 +30,8 @@
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints maxHeight="321.19212341308594" minHeight="10.0" prefHeight="149.49209594726562" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="406.5079040527344" minHeight="10.0" prefHeight="406.5079040527344" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="321.19212341308594" minHeight="10.0" prefHeight="80.5" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="509.0" minHeight="10.0" prefHeight="465.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <VBox alignment="CENTER" prefHeight="493.0" prefWidth="335.0" spacing="2" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
@@ -46,15 +46,24 @@
                               </Button>
                            </children>
                         </AnchorPane>
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Button" />
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Button" />
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Button" />
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Button" />
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Button" />
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Button" />
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Button" />
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Button" />
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Button" />
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" onAction="#handleHelpAccept" prefHeight="40.0" text="Buzz" />
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Buzz Jr." />
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="George" />
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="P." />
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Burdell" />
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Paul" />
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Sully" />
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Finn" />
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Sean" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2">
+                     <children>
+                        <Label alignment="BASELINE_CENTER" contentDisplay="CENTER" prefHeight="56.0" prefWidth="235.0" text="Help is here. Select from one of these volunteers for a chat." textAlignment="CENTER" wrapText="true">
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </VBox.margin>
+                        </Label>
                      </children>
                   </VBox>
                </children>
