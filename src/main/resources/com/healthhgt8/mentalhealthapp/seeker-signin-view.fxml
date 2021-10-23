@@ -8,11 +8,22 @@
 <?import javafx.scene.control.CheckBox?>
 
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+<?import javafx.scene.layout.AnchorPane?>
+
+
+
+<VBox alignment="CENTER" spacing="20.0"
+      xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.healthhgt8.mentalhealthapp.SeekerSignInController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
+
+    <AnchorPane>
+        <Button fx:id="signInBack" text="Back"
+                onAction="#handleSignInBack"
+                AnchorPane.leftAnchor="1"/>
+    </AnchorPane>
 
     <Label text="Enter name:"/>
     <TextField fx:id="nameInput"/>
