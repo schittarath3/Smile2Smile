@@ -15,7 +15,7 @@ import java.util.*;
 public class DBObject {
 
     private static DBObject instance = new DBObject();
-    private final MongoClient client = MongoClients.create("mongodb+srv://hackgt8-mental-health:cR7jD9*~52QyA6T@cluster0.j9dny.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"); //FIXME: paste in connection string here
+    private final MongoClient client = MongoClients.create("$credentials"); //FIXME: paste in connection string here
 
 
     // Get the only object available
