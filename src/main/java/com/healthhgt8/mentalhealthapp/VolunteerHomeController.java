@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
@@ -27,6 +28,12 @@ public class VolunteerHomeController implements Initializable {
 
     @FXML
     private TextField enterMeetURL;
+    @FXML
+    private Label meetingLbl;
+    @FXML
+    private Button enterMeetBtn;
+    @FXML
+    private Label validMeeting;
 
     public void setServices(HostServices services) {
         this.services = services;
@@ -38,7 +45,9 @@ public class VolunteerHomeController implements Initializable {
         HostServices services = this.services;
         services.showDocument(googleMeetURL);
 
+        meetingLbl.setVisible(true);
         enterMeetURL.setVisible(true);
+        enterMeetBtn.setVisible(true);
     }
 
 
@@ -48,5 +57,13 @@ public class VolunteerHomeController implements Initializable {
 
     @FXML
     public void handleMeetLink(ActionEvent actionEvent) {
+        String meetingURL = enterMeetURL.getText();
+        if (meetingURL.split(" ").length == 0
+                || meetingURL.length()==1) {
+            validMeeting.setVisible(true);
+        } else {
+            validMeeting.setVisible(false);
+            //df.post(userInfo, MeetingID, hashedMeetingID)
+        }
     }
 }

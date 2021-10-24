@@ -1,5 +1,8 @@
 package com.healthhgt8.mentalhealthapp;
 
+import com.mongodb.ClientSessionOptions;
+import com.mongodb.client.*;
+import com.mongodb.connection.ClusterDescription;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -7,6 +10,7 @@ import javafx.stage.Stage;
 import org.kordamp.bootstrapfx.BootstrapFX;
 
 import java.io.IOException;
+import java.util.List;
 
 public class HealthApp extends Application {
     @Override

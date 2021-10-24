@@ -39,22 +39,22 @@
                         <AnchorPane prefHeight="10.0" prefWidth="200.0">
                            <children>
                               <Label alignment="BASELINE_LEFT" text="Available Helpers:" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="4.0" />
-                              <Button maxHeight="20.0" minHeight="20.0" mnemonicParsing="false" prefHeight="20.0" text="Refresh" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                              <Button maxHeight="20.0" minHeight="20.0" mnemonicParsing="false" prefHeight="20.0" text="Refresh" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0" onAction="#handleRefresh">
                                  <font>
                                     <Font size="9.0" />
                                  </font>
                               </Button>
                            </children>
                         </AnchorPane>
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" onAction="#handleHelpAccept" prefHeight="40.0" text="Buzz" />
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Buzz Jr." />
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="George" />
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="P." />
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Burdell" />
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Paul" />
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Sully" />
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Finn" />
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Sean" />
+                        <Button fx:id="helpBtn1" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Buzz" onAction="#handleHelpAccept"/>
+                        <Button fx:id="helpBtn2" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Buzz Jr." />
+                        <Button fx:id="helpBtn3" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="George" />
+                        <Button fx:id="helpBtn4" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="P." />
+                        <Button fx:id="helpBtn5" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Burdell" />
+                        <Button fx:id="helpBtn6" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Paul" />
+                        <Button fx:id="helpBtn7" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Sully" />
+                        <Button fx:id="helpBtn8" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Finn" />
+                        <Button fx:id="helpBtn9" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" text="Sean" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2">

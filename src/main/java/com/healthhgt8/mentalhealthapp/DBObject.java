@@ -17,7 +17,6 @@ public class DBObject {
      * @param connectionString
      */
     public DBObject(ConnectionString connectionString) {
-        ConnectionString connectionString = new ConnectionString("mongodb+srv://hackgt8-mental-health:@cluster0.j9dny.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
         MongoClientSettings settings = MongoClientSettings.builder()
         .applyConnectionString(connectionString)
         .build();

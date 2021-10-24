@@ -65,15 +65,16 @@
                         </Button>
                         <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" spacing="10.0">
                            <children>
-                              <Label text="Meeting&#13;Link" />
-                              <TextField alignment="BASELINE_LEFT">
+                              <Label fx:id="meetingLbl" text="Meeting&#13;Link" visible="false" />
+                              <TextField fx:id="enterMeetURL" alignment="BASELINE_LEFT" visible="false">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                               </TextField>
-                              <Button mnemonicParsing="false" text="Enter" onAction="#handleMeetLink"/>
+                              <Button fx:id="enterMeetBtn" mnemonicParsing="false" onAction="#handleMeetLink" text="Enter" visible="false" />
                            </children>
                         </HBox>
+                        <Label fx:id="validMeeting" text="Please enter a valid meeting URL" visible="false"/>
                      </children>
                   </VBox>
                </children>

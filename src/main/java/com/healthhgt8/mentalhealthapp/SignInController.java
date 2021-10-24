@@ -12,6 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.controlsfx.control.Notifications;
+import org.kordamp.bootstrapfx.BootstrapFX;
 
 import java.io.IOException;
 import java.net.URL;
@@ -63,11 +64,17 @@ public abstract class SignInController implements Initializable {
 
     @FXML
     void handleSignInBack() throws IOException {
+
         Stage stage = (Stage) validSchool.getScene().getWindow();
+        Parent root;
 
-        FXMLLoader fxmlLoader = new FXMLLoader(HealthApp.class.getResource("landing-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("landing-view.fxml"));
+        root = fxmlLoader.load();
+        LandingController controller = fxmlLoader.getController();
+        controller.setServices(this.services);
 
-        Scene scene = new Scene(fxmlLoader.load(), 375, 700);
+        Scene scene = new Scene(root, 375, 700);
+        scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
