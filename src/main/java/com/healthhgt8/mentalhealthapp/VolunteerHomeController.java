@@ -3,17 +3,11 @@ package com.healthhgt8.mentalhealthapp;
 import javafx.application.HostServices;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
-import org.kordamp.bootstrapfx.BootstrapFX;
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.net.URL;
@@ -34,6 +28,17 @@ public class VolunteerHomeController implements Initializable {
     private Button enterMeetBtn;
     @FXML
     private Label validMeeting;
+
+    @FXML
+    private Label name;
+    @FXML
+    private Label major;
+    @FXML
+    private Label year;
+    @FXML
+    private Label school;
+    @FXML
+    private Label description;
 
     public void setServices(HostServices services) {
         this.services = services;
@@ -63,7 +68,20 @@ public class VolunteerHomeController implements Initializable {
             validMeeting.setVisible(true);
         } else {
             validMeeting.setVisible(false);
-            //df.post(userInfo, MeetingID, hashedMeetingID)
+            DBObject.getInstance().attachMeeting(
+                    User.getInstance().getEmail(),
+                    meetingURL,
+                    "test",
+                    "Users"
+                );
         }
+    }
+
+    protected void fillFields(String name, String major, String year, String school, String description) {
+        this.name.setText("Name: " + name);
+        this.major.setText("Major: " + major);
+        this.year.setText("Year: " + year);
+        this.school.setText("School: " + name);
+        this.description.setText("Description: " + description);
     }
 }

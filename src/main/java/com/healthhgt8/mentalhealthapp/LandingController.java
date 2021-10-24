@@ -45,6 +45,7 @@ public class LandingController implements Initializable {
 
         Scene scene = new Scene(root, 375, 600);
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
+        scene.getStylesheets().add(this.getClass().getResource("seekerscene.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
     }

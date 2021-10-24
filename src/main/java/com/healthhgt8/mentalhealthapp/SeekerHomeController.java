@@ -5,8 +5,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import org.bson.Document;
 
 
+import java.lang.annotation.Documented;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -46,27 +48,25 @@ public class SeekerHomeController implements Initializable {
     @FXML
     private void handleHelpAccept(ActionEvent event) {
         Button source = (Button) event.getSource();
-        String meetingHashID = source.getId();
-        //Lookup: String meetingURL = db.query(meetingHashID).getMeetingLink()
-        //After seeker is satisfied, clear meeting link for database
-        String meetingURL = "https://www.google.com"; //Placeholder
+        String meetingURL = source.getId();
+        System.out.println(meetingURL);
         services.showDocument(meetingURL);
-        source.setId("");
     }
 
     @FXML
     private void handleRefresh(ActionEvent actionEvent) {
         //Query table for hashedID or meetingID
-        String[] strings = {"a", "b", "c", "d", "E",
-        "f", "g", "h", "i"};
+        List<Document> randVolunteers =
+                DBObject.getInstance().queryRandom(9, "test", "Users");
         //String[] strings = new String[9];
         for (int idx = 0; idx < 9; idx++) {
-            buttonList.get(idx).setId(strings[idx]);
+            buttonList.get(idx).setText((String) randVolunteers.get(idx).get("name"));
+            buttonList.get(idx).setId((String) randVolunteers.get(idx).get("meeting"));
         }
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle) { 
         Button[] btnList = {helpBtn1, helpBtn2, helpBtn3, helpBtn4, helpBtn5,
                 helpBtn6, helpBtn7, helpBtn8, helpBtn9};
         buttonList = Arrays.asList(btnList);

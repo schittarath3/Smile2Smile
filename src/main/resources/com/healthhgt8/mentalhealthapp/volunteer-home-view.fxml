@@ -40,15 +40,15 @@ style="">
                   <VBox alignment="CENTER" prefHeight="461.0" prefWidth="336.0" spacing="10" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
                      <children>
                         <Label text="Someone Needs Your Help" />
-                        <Label text="Name">
+                        <Label fx:id="name" text="Name">
                            <VBox.margin>
                               <Insets top="10.0" />
                            </VBox.margin>
                         </Label>
-                        <Label text="Major" />
-                        <Label text="Year" />
-                        <Label text="School" />
-                        <Label text="Description" />
+                        <Label fx:id="major" text="Major" />
+                        <Label fx:id="year" text="Year" />
+                        <Label fx:id="school" text="School" />
+                        <Label fx:id="description" text="Description" />
                         <Button contentDisplay="RIGHT" mnemonicParsing="false" onAction="#launchGMeet" text="Connect on Google Meet" styleClass="btn, btn-primary">
                            <VBox.margin>
                               <Insets top="15.0" />
@@ -98,6 +98,5 @@ style="">
             </MenuBar>
          </bottom>
       </BorderPane>
-
    </children>
 </VBox>

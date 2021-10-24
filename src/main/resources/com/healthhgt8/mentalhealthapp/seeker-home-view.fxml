@@ -47,14 +47,14 @@
                            </children>
                         </AnchorPane>
                         <Button fx:id="helpBtn1" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" onAction="#handleHelpAccept" prefHeight="40.0" styleClass="btn, btn-primary" text="Buzz" />
-                        <Button fx:id="helpBtn2" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" styleClass="btn, btn-primary" text="Buzz Jr." />
-                        <Button fx:id="helpBtn3" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" styleClass="btn, btn-primary" text="George" />
-                        <Button fx:id="helpBtn4" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" styleClass="btn, btn-primary" text="P." />
-                        <Button fx:id="helpBtn5" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" styleClass="btn, btn-primary" text="Burdell" />
-                        <Button fx:id="helpBtn6" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" styleClass="btn, btn-primary" text="Paul" />
-                        <Button fx:id="helpBtn7" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" styleClass="btn, btn-primary" text="Sully" />
-                        <Button fx:id="helpBtn8" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" styleClass="btn, btn-primary" text="Finn" />
-                        <Button fx:id="helpBtn9" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" prefHeight="40.0" styleClass="btn, btn-primary" text="Sean" />
+                        <Button fx:id="helpBtn2" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" onAction="#handleHelpAccept" prefHeight="40.0" styleClass="btn, btn-primary" text="Buzz Jr." />
+                        <Button fx:id="helpBtn3" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" onAction="#handleHelpAccept" prefHeight="40.0" styleClass="btn, btn-primary" text="George" />
+                        <Button fx:id="helpBtn4" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" onAction="#handleHelpAccept" prefHeight="40.0" styleClass="btn, btn-primary" text="P." />
+                        <Button fx:id="helpBtn5" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" onAction="#handleHelpAccept" prefHeight="40.0" styleClass="btn, btn-primary" text="Burdell" />
+                        <Button fx:id="helpBtn6" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" onAction="#handleHelpAccept" prefHeight="40.0" styleClass="btn, btn-primary" text="Paul" />
+                        <Button fx:id="helpBtn7" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" onAction="#handleHelpAccept" prefHeight="40.0" styleClass="btn, btn-primary" text="Sully" />
+                        <Button fx:id="helpBtn8" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" onAction="#handleHelpAccept" prefHeight="40.0" styleClass="btn, btn-primary" text="Finn" />
+                        <Button fx:id="helpBtn9" maxHeight="1.7976931348623157E308" maxWidth="200.0" mnemonicParsing="false" onAction="#handleHelpAccept" prefHeight="40.0" styleClass="btn, btn-primary" text="Sean" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnSpan="2">

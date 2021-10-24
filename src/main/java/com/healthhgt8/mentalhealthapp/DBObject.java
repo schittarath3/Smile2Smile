@@ -1,13 +1,15 @@
 package com.healthhgt8.mentalhealthapp;
 
-import com.mongodb.client.MongoClient;
-import com.mongodb.client.MongoClients;
+import com.mongodb.BasicDBObject;
+import com.mongodb.client.*;
+import com.mongodb.client.model.Updates;
+import com.mongodb.client.model.Filters;
+import com.mongodb.client.model.Filters.*;
 
-import com.mongodb.client.MongoDatabase;
-
+import org.bson.BsonDocument;
 import org.bson.Document;
 
-import java.util.HashMap;
+import java.util.*;
 
 
 public class DBObject {
@@ -41,6 +43,43 @@ public class DBObject {
         return true;
     }
 
+    /**
+     *
+     * @param number Number of random entries to fetch
+     * @return
+     */
+    public List<Document> queryRandom(int number, String dbName, String collectionName) {
+        MongoDatabase db = client.getDatabase(dbName);
+        MongoCollection<Document> collection = db.getCollection(collectionName);
+        // query for all documents and add them to an arraylist
+        // record collection size under here -- collectionSize
+        FindIterable<Document> iterable = collection.find();
+        MongoCursor<Document> cursor = iterable.iterator();
+        List<Document> collectionList = new ArrayList<>();
+        while(cursor.hasNext()) {
+            collectionList.add(cursor.next());
+        }
+        int collectionSize = collectionList.size();
+        Set<Integer> indices = new HashSet<>();
+        while (indices.size() < number) {
+            int randomIndex = (int) Math.floor(Math.random() * collectionSize);
+            indices.add(randomIndex);
+
+        }
+        List<Document> documentList = new ArrayList<>();
+        indices.forEach(index -> {
+            Document dbObj = collectionList.get(index);
+            documentList.add(dbObj);
+        });
+        return documentList;
+    }
+
+    public void attachMeeting(String email, String meeting, String dbName, String collectionName) {
+        MongoDatabase db = client.getDatabase(dbName);
+        MongoCollection<Document> collection = db.getCollection(collectionName);
+
+        collection.updateOne(Filters.eq("email", email), Updates.combine(Updates.set("meeting", meeting)));
+    }
 
     public MongoClient getClient() {
         return this.client;

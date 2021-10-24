@@ -24,7 +24,9 @@ public class HealthApp extends Application {
         controller.setServices(this.getHostServices());
 
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
-        stage.setTitle("Hello!");
+        scene.getStylesheets().add(this.getClass().getResource("landing.css").toExternalForm());
+
+        stage.setTitle("MentalHealth@GT");
         stage.setScene(scene);
         stage.show();
     }
