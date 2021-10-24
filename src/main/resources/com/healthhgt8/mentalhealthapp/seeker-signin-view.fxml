@@ -20,7 +20,8 @@
     <AnchorPane>
         <Button fx:id="signInBack" text="Back"
                 onAction="#handleSignInBack"
-                AnchorPane.leftAnchor="1"/>
+                AnchorPane.leftAnchor="1"
+                styleClass="btn, btn-primary"/>
     </AnchorPane>
 
     <Label text="Enter name:"/>
@@ -45,5 +46,5 @@
 
     <CheckBox fx:id="anonCheck" text="Stay anonymous?"/>
 
-    <Button fx:id="SignIn" text="Sign Up" onAction="#startSeekerScreen"/>
+    <Button fx:id="SignIn" text="Sign Up" styleClass="btn, btn-primary" onAction="#startSeekerScreen"/>
 </VBox>
