@@ -9,7 +9,7 @@
 
 <?import javafx.scene.layout.AnchorPane?>
 
-<VBox alignment="CENTER" spacing="15.0"
+<VBox alignment="CENTER" spacing="10.0"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.healthhgt8.mentalhealthapp.VolunteerSignInController">
     <padding>
@@ -19,26 +19,27 @@
     <AnchorPane>
         <Button fx:id="signInBack" text="Back"
                 onAction="#handleSignInBack"
-                AnchorPane.leftAnchor="1"/>
+                AnchorPane.leftAnchor="1"
+                styleClass="btn, btn-primary"/>
     </AnchorPane>
 
-    <Label text="Enter name:"/>
+    <Label text="Enter name:" styleClass="h4"/>
     <TextField fx:id="nameInput"/>
     <Label fx:id="validName"/>
 
-    <Label text="Enter School:"/>
+    <Label text="Enter School:" styleClass="h4"/>
     <TextField fx:id="schoolInput"/>
     <Label fx:id="validSchool"/>
 
-    <Label text="Enter Major:"/>
+    <Label text="Enter Major:" styleClass="h4"/>
     <TextField fx:id="majorInput"/>
     <Label fx:id="validMajor"/>
 
-    <Label text="Enter Year:"/>
+    <Label text="Enter Year:" styleClass="h4"/>
     <TextField fx:id="yearInput"/>
     <Label fx:id="validYear"/>
 
-    <Label text="Enter Email: (Used to connect to Google Meet)"/>
+    <Label text="Enter Email: (Used to connect to Meet)" styleClass="h4"/>
     <TextField fx:id="emailInput"/>
     <Label fx:id="validEmail"/>
 

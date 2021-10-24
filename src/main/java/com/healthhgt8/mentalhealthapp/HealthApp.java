@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import org.kordamp.bootstrapfx.BootstrapFX;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 
 public class HealthApp extends Application {

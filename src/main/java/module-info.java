@@ -12,6 +12,8 @@ module com.healthhgt8.mentalhealthapp {
     requires unirest.java;
     requires org.mongodb.driver.sync.client;
     requires org.mongodb.driver.core;
+    requires org.mongodb.bson;
+    requires javafaker;
 
     opens com.healthhgt8.mentalhealthapp to javafx.fxml;
     exports com.healthhgt8.mentalhealthapp;

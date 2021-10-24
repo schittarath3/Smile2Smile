@@ -1,24 +1,47 @@
 package com.healthhgt8.mentalhealthapp;
 
+import com.github.javafaker.Faker;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.CheckBox;
 import javafx.stage.Stage;
 import org.kordamp.bootstrapfx.BootstrapFX;
+import com.github.javafaker.Faker;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Objects;
 
 public class SeekerSignInController extends SignInController {
+
+    @FXML
+    private CheckBox anonCheck;
 
     @Override
     public boolean sendInfoToDatabase() {
         boolean validFields = super.textFieldCheck();
         super.sendAccountCreateNotif(validFields);
+
+        HashMap<String, String> map = new HashMap<>();
+
+        if (anonCheck.isSelected()) {
+            String fakeName = "Joe Doe"
+            map.put("name", fakeName);
+        } else {
+            map.put("name", super.nameInput.getText());
+        }
+
+        map.put("school", super.schoolInput.getText());
+        map.put("year", super.yearInput.getText());
+        map.put("major", super.majorInput.getText());
+        map.put("email", super.emailInput.getText());
+
+        DBObject dbObject = DBObject.getInstance();
+        dbObject.sendToDB(map, "test", "Client");
+
         return validFields;
     }
 

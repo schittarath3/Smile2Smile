@@ -16,7 +16,8 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fx:id="volunteerHomePane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" spacing="20.0" styleClass="bg-default" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.healthhgt8.mentalhealthapp.VolunteerHomeController">
+<VBox fx:id="volunteerHomePane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" spacing="20.0" styleClass="bg-default" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.healthhgt8.mentalhealthapp.VolunteerHomeController"
+style="">
    <children>
       <BorderPane prefHeight="600.0" prefWidth="300.0">
          <top>
@@ -48,7 +49,7 @@
                         <Label text="Year" />
                         <Label text="School" />
                         <Label text="Description" />
-                        <Button contentDisplay="RIGHT" mnemonicParsing="false" onAction="#launchGMeet" text="Connect on Google Meet">
+                        <Button contentDisplay="RIGHT" mnemonicParsing="false" onAction="#launchGMeet" text="Connect on Google Meet" styleClass="btn, btn-primary">
                            <VBox.margin>
                               <Insets top="15.0" />
                            </VBox.margin>
@@ -71,7 +72,7 @@
                                     <Insets />
                                  </HBox.margin>
                               </TextField>
-                              <Button fx:id="enterMeetBtn" mnemonicParsing="false" onAction="#handleMeetLink" text="Enter" visible="false" />
+                              <Button fx:id="enterMeetBtn" mnemonicParsing="false" onAction="#handleMeetLink" text="Enter" visible="false" styleClass="btn, btn-primary"/>
                            </children>
                         </HBox>
                         <Label fx:id="validMeeting" text="Please enter a valid meeting URL" visible="false"/>

@@ -43,7 +43,7 @@ public class LandingController implements Initializable {
         SeekerSignInController controller = fxmlLoader.getController();
         controller.setServices(this.services);
 
-        Scene scene = new Scene(root, 375, 700);
+        Scene scene = new Scene(root, 375, 600);
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
         stage.setScene(scene);
         stage.show();
@@ -61,6 +61,7 @@ public class LandingController implements Initializable {
 
         Scene scene = new Scene(root, 375, 600);
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
+        scene.getStylesheets().add(this.getClass().getResource("scene.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
     }

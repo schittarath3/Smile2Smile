@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import org.kordamp.bootstrapfx.BootstrapFX;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Objects;
 
 public class VolunteerSignInController extends SignInController{
@@ -17,6 +18,17 @@ public class VolunteerSignInController extends SignInController{
     boolean sendInfoToDatabase() {
         boolean validFields = super.textFieldCheck();
         super.sendAccountCreateNotif(validFields);
+
+        HashMap<String, String> map = new HashMap<>();
+        map.put("name", super.nameInput.getText());
+        map.put("school", super.schoolInput.getText());
+        map.put("year", super.yearInput.getText());
+        map.put("major", super.majorInput.getText());
+        map.put("email", super.emailInput.getText());
+
+        DBObject dbObject = DBObject.getInstance();
+        dbObject.sendToDB(map, "test", "Users");
+
         return validFields;
     }
 
@@ -37,6 +49,7 @@ public class VolunteerSignInController extends SignInController{
 
         Scene scene = new Scene(root, 375, 600);
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
+        scene.getStylesheets().add(this.getClass().getResource("scene.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
     }

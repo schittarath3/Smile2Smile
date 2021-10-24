@@ -20,27 +20,27 @@ import java.util.ResourceBundle;
 
 public abstract class SignInController implements Initializable {
     @FXML
-    private TextField nameInput;
+    protected TextField nameInput;
     @FXML
     private Label validName;
 
     @FXML
-    private TextField schoolInput;
+    protected TextField schoolInput;
     @FXML
     private Label validSchool;
 
     @FXML
-    private TextField majorInput;
+    protected TextField majorInput;
     @FXML
     private Label validMajor;
 
     @FXML
-    private TextField yearInput;
+    protected TextField yearInput;
     @FXML
     private Label validYear;
 
     @FXML
-    private TextField emailInput;
+    protected TextField emailInput;
     @FXML
     private Label validEmail;
 
@@ -73,7 +73,7 @@ public abstract class SignInController implements Initializable {
         LandingController controller = fxmlLoader.getController();
         controller.setServices(this.services);
 
-        Scene scene = new Scene(root, 375, 700);
+        Scene scene = new Scene(root, 375, 600);
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
         stage.setTitle("Hello!");
         stage.setScene(scene);
